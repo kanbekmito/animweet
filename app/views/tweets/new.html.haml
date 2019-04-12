@@ -1,0 +1,9 @@
+.contents.row
+  .container
+    = form_with url:'/tweets', method: :post, local: true do |f|
+      %h3
+        好きに語る
+      = f.text_area :text, class: "comment", size: "30x6", :placeholder => "text"
+      = f.text_field :name, :placeholder =>"Nickname"
+      = f.text_field :image, :placeholder => "Image Url"
+      = f.submit "Go tweet!"

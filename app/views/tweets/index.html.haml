@@ -1,0 +1,9 @@
+/ <div class="contents row" >
+/ <div class="content_post" style="background-image: url(<haml_silent></haml_silent>);">
+/ <span class="name"><haml_silent></haml_silent></span>
+/ </div>
+/ </div>
+.contents.row
+  - @tweets.each do |tweet|
+    = render partial: "tweet", locals: { tweet: tweet }
+  = paginate(@tweets)
